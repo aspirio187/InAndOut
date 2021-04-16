@@ -10,12 +10,14 @@ namespace InAndOut.Controllers
     {
         public IActionResult Index()
         {
+            bool f = Details(2).Value;
             return View();
         }
 
-        public IActionResult Details(int id)
+        public ActionResult<bool> Details(int id)
         {
-            return Ok("You have entered id = " + id);
+            return Ok(true);
         }
     }
 }
+ 
