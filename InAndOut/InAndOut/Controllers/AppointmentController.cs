@@ -10,9 +10,7 @@ namespace InAndOut.Controllers
     {
         public IActionResult Index()
         {
-            //return View();
-            string todaysDate = DateTime.Now.AddDays(20).ToShortDateString();
-            return Ok(todaysDate);
+            return View();
         }
     }
 }
