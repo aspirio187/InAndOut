@@ -14,7 +14,6 @@ namespace InAndOut.Models
         [DisplayName("Expense Name")]
         public string ExpenseName { get; set; }
 
-        [Column(TypeName = "decimal(5,2)")]
-        public decimal Amount { get; set; }
+        public int Amount { get; set; }
     }
 }
