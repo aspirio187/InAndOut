@@ -1,4 +1,4 @@
-﻿@model IEnumerable<InAndOut.Models.ExpenseCategory>
+﻿@model IEnumerable<InAndOut.Models.ExpenseType>
 @{
     ViewData["Title"] = "Index";
 }
@@ -11,7 +11,7 @@
             <h2 class="text-primary">Expense categories List</h2>
         </div>
         <div class="col-6 text-right">
-            <a asp-controller="ExpenseCategory" asp-action="Create" class="btn btn-primary">Create new Expense Category</a>
+            <a asp-controller="ExpenseType" asp-action="Create" class="btn btn-primary">Create new Expense Category</a>
         </div>
     </div>
     <br />
@@ -33,8 +33,8 @@
                         <td width="50%">@item.Name</td>
                         <td width="50%">
                             <div class="w-100 btn-group" role="group">
-                                <a asp-controller="ExpenseCategory" asp-action="Update" asp-route-Id="@item.Id" class="btn btn-primary mx-1">Update</a>
-                                <a asp-controller="ExpenseCategory" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger mx-1">Delete</a>
+                                <a asp-controller="ExpenseType" asp-action="Update" asp-route-Id="@item.Id" class="btn btn-primary mx-1">Update</a>
+                                <a asp-controller="ExpenseType" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger mx-1">Delete</a>
                             </div>
                         </td>
                     </tr>
