@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InAndOut.Models
 {
-    public class ExpenseCategory
+    public class ExpenseType
     {
         public int Id { get; set; }
 
