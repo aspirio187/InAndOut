@@ -10,6 +10,7 @@ namespace InAndOut.Models
 {
     public class Expense
     {
+        [Key]
         public int Id { get; set; }
 
         [DisplayName("Expense Name")]
