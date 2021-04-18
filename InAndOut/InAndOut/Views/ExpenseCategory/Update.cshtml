@@ -1,40 +1,38 @@
-﻿@model InAndOut.Models.Expense
+﻿@model InAndOut.Models.ExpenseCategory  
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Update";
 }
 
-<h1>Create Expense</h1>
+<h1>Update Expense Category</h1>
 
-<form method="post" asp-action="Create">
+<form method="post" asp-action="Update">
     <div class="border p-3">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div> @* => Pas obligatoire*@
         <div class="form-group row">
-            <h2 class="text-black-50 pl-3">Add Expense</h2>
+            <h2 class="text-black-50 pl-3">Update Expense Category</h2>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="form-group row">
                     <div class="col-4">
-                        <label asp-for="ExpenseName"></label>
+                        <label asp-for="Id"></label>
                     </div>
                     <div class="col-4">
-                        <label asp-for="Amount"></label>
+                        <label asp-for="Name"></label>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-4">
-                        <input asp-for="ExpenseName" class="form-control" />
-                        <span asp-validation-for="ExpenseName" class="text-danger"></span>
+                        <input asp-for="Id" disabled class="form-control" />
                     </div>
                     <div class="col-4">
-                        <input asp-for="Amount" type="number" class="form-control" />
-                        <span asp-validation-for="Amount" class="text-danger"></span>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-8 offset-2 row">
                         <div class="col">
-                            <input type="submit" class="btn btn-info w-75" value="create" />
+                            <input type="submit" class="btn btn-info w-75" value="Update" />
                         </div>
                         <div class="col">
                             <a asp-action="Index" class="btn btn-danger w-75">Back</a>
@@ -46,7 +44,3 @@
         </div>
     </div>
 </form>
-
-@section Scripts{
-    @{ <partial name="_ValidationScriptsPartial" />}
- }
